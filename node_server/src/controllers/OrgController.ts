@@ -90,9 +90,10 @@ const putOrgCollection = async (req: Request, res: Response, next: NextFunction)
             if (err) { res.send(err); }
           })
       }
-      const newOrg_ = await Orgnization.findOne({ _id: req.params.id });
-      res.json(newOrg_);
     }
+    const newOrg_ = await Orgnization.findOne({ _id: req.params.id });
+    res.json(newOrg_);
+
   }
   catch (err) {
     console.log("error: ------- ", err);
